@@ -282,6 +282,57 @@ strong { font-weight: 600; color: var(--fg); }
 }
 .principle__desc { margin: 0; color: var(--muted); font-size: 0.96rem; }
 
+/* --- social impact ------------------------------------------------------ */
+.impact__feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card);
+  padding: clamp(28px, 4vw, 44px);
+  transition: border-color 0.22s ease, background 0.22s ease;
+}
+.impact__feature:hover {
+  border-color: var(--line-2);
+  background: rgba(255, 255, 255, 0.035);
+}
+.impact__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  flex: none;
+  filter: drop-shadow(0 6px 24px rgba(242, 99, 90, 0.18));
+}
+.impact__logo svg { width: 100%; height: 100%; }
+.impact__kicker {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.impact__name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+.impact__desc {
+  margin: 0 0 24px;
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.62;
+}
+.impact__cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
 /* --- contact ------------------------------------------------------------ */
 .contact { text-align: center; }
 .contact__title {
@@ -326,6 +377,12 @@ strong { font-weight: 600; color: var(--fg); }
   .grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .principles { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .footer { flex-direction: row; align-items: center; justify-content: space-between; }
+  .impact__feature {
+    grid-template-columns: auto 1fr;
+    gap: 44px;
+    padding: clamp(36px, 4vw, 56px);
+  }
+  .impact__logo { width: 116px; height: 116px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
