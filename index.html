@@ -12,6 +12,28 @@
   <meta property="og:description" content="A small, independent software studio. AI-native by default." />
   <meta property="og:url" content="https://not-a-camp.com" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Matomo, self-hosted at analytics.not-a-camp.com (site 3). Cookieless, honours
+       Do Not Track, and only runs on the live domain (local previews send nothing). -->
+  <script>
+    if (/^(www\.)?not-a-camp\.com$/.test(location.hostname)) {
+      var _paq = (window._paq = window._paq || []);
+      _paq.push(["disableCookies"]);
+      _paq.push(["setDoNotTrack", true]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://analytics.not-a-camp.com/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "3"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    }
+  </script>
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
